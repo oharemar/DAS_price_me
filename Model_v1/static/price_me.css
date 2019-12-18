@@ -1,0 +1,72 @@
+body {
+    color:DarkRed;
+    margin-top:5px;
+    margin-bottom:5px;
+    background-image: url("./HynekPriceMe.jpg");
+    background-repeat:no-repeat;
+    background-position: center;
+    background-attachment: fixed;
+    background-size: cover;
+}
+
+#prieceMe {
+    width:100%;
+    text-align: center;
+    color:black;
+    font-size:400%;
+    background: rgba(200, 200, 200, 0.5);
+    margin: 10px 0 40px 0;
+ }
+
+.subtitle{
+    font-weight: bold;
+    font-size: 150%;
+}
+
+.baseMargin{
+    margin: 0 0 0 8%;
+}
+
+.questions{
+    font-weight:bold;
+    margin-left:2.5%;
+}
+
+.choises{
+    margin-left:10%;
+}
+
+#result{
+    font-size:125%;
+    margin-left:1%;
+}
+
+#autors {
+    font-weight:bold;
+    font-size:125%;
+    margin-left:1%;
+}
+
+label{
+    cursor: pointer;
+    white-space: pre-line;
+    display:table-row-group;
+}
+
+input[type=radio]{
+    cursor: pointer;
+    margin: 0 8px 0 0;
+}
+
+label:hover{
+    text-decoration: underline;
+}
+
+input[type='number'] {
+    -moz-appearance:textfield;
+}
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+}
