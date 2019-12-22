@@ -3,141 +3,325 @@
 <head>
     <meta charset="utf-8" />
     <link rel="stylesheet" href="{{ url_for('static', filename='./price_me.css') }}" >
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script>
+    $(document).ready(function () {
+
+    $('.scroller').click(function () {
+
+        var fuller = $(this).closest('.Next1').next(),
+            BODY = $(this).closest('.right');
+
+        BODY.animate({
+            scrollTop: BODY.scrollTop() + fuller.offset().top
+        }, 700);
+    });
+
+    $('#choisesCheckbox').click( function() {
+        var boolin = false;
+        for( var i = 1; i < 5; i++){
+            var namePom = "platform"+i;
+            var boolinPom = $('input[type=checkbox][name='+namePom+']').prop('checked');
+            if( boolinPom ){
+                boolin = boolin || true;
+            }
+        }
+        if( boolin )
+        { $("#Q8").show();}
+        else
+        {$("#Q8").hide();}
+    });
+    });
+    </script>
 </head>
 <body>
+<div class="BODY right">
+    <div id="Head" class="Next1">
         <div id="prieceMe">
             Price me!
         </div>
         <div class="baseMargin subtitle">
-            Welcome in price me. Please fill as many question as you can, it can influer the evaluation of your dream money!
+            Welcome in price me. Please fill as many question as you can, it can influer the evaluation of your dream money!<br>
         </div>
-    <form method="GET">
-        <div class="questions">
-            Do you code as a hobby?
-        </div>
+        <div class="Next scroller">GO price me!</div>
+    </div>
 
-        <div class="choises">
-        <label><input type="radio" name="hobby" value="1" />Yes</label>
-        <label><input type="radio" name="hobby" value="0" />No</label>
+    <div id="rows">
+        <div class="column left">
+            <div class="Answers">
+                <div class="column1 left1">
+                    <div class="AnsweredQ">Hobby</div>
+                </div>
+                <div class="column1 right1">
+                    <div id="Q1"><li /></div>
+                </div>
+            </div>
+            <div class="Answers">
+                <div class="column1 left1">
+                    <div class="AnsweredQ">Full-time</div>
+                </div>
+                <div class="column1 right1">
+                    <div id="Q2"><li /></div>
+                </div>
+            </div>
+            <div class="Answers">
+                <div class="column1 left1">
+                    <div class="AnsweredQ">Education</div>
+                </div>
+                <div class="column1 right1">
+                    <div id="Q3"><li /></div>
+                </div>
+            </div>
+            <div class="Answers">
+                <div class="column1 left1">
+                    <div class="AnsweredQ">co-workers</div>
+                </div>
+                <div class="column1 right1">
+                    <div id="Q4"><li /></div>
+                </div>
+            </div>
+            <div class="Answers">
+                <div class="column1 left1">
+                    <div class="AnsweredQ">Coding-time</div>
+                </div>
+                <div class="column1 right1">
+                    <div id="Q5"><li /></div>
+                </div>
+            </div>
+            <div class="Answers">
+                <div class="column1 left1">
+                    <div class="AnsweredQ">Coding-prof</div>
+                </div>
+                <div class="column1 right1">
+                    <div id="Q6"><li /></div>
+                </div>
+            </div>
+            <div class="Answers">
+                <div class="column1 left1">
+                    <div class="AnsweredQ">Job-seeking</div>
+                </div>
+                <div class="column1 right1">
+                    <div id="Q7"><li /></div>
+                </div>
+            </div>
+            <div class="Answers">
+                <div class="column1 left1">
+                    <div class="AnsweredQ">OS</div>
+                </div>
+                <div class="column1 right1">
+                    <div id="Q8"><li /></div>
+                </div>
+            </div>
+            <div class="Answers">
+                <div class="column1 left1">
+                    <div class="AnsweredQ">Age</div>
+                </div>
+                <div class="column1 right1">
+                    <div id="Q9"><li /></div>
+                </div>
+            </div>
+            <div class="Answers">
+                <div class="column1 left1">
+                    <div class="AnsweredQ">Gender</div>
+                </div>
+                <div class="column1 right1">
+                    <div id="Q10"><li /></div>
+                </div>
+            </div>
+            <div class="Answers">
+                <div class="column1 left1">
+                    <div class="AnsweredQ">Dependents</div>
+                </div>
+                <div class="column1 right1">
+                    <div id="Q11"><li /></div>
+                </div>
+            </div>
+            <div class="Answers">
+                <div class="column1 left1">
+                    <div class="AnsweredQ">Student</div>
+                </div>
+                <div class="column1 right1">
+                    <div id="Q12"><li /></div>
+                </div>
+            </div>
         </div>
+        <div class="column right pomBackground">
+            <form method="GET">
+                <div class="Next1 MainSettingClass">
+                    <div class="questions">Do you code as a hobby?</div>
 
-        <div class="questions">
-            Are you employed as full-time worker?
+                    <div class="choises">
+                        <label onclick='$("#Q1").show()'><input type="radio" name="hobby" value="1" />Yes</label>
+                        <label onclick='$("#Q1").show()'><input type="radio" name="hobby" value="0" />No</label>
+                    </div>
+                    <div class="Next scroller">Next</div>
+                </div>
+
+
+                <div class="Next1 MainSettingClass">
+                    <div class="questions">
+                        Are you employed as full-time worker?
+                    </div>
+
+                    <div class="choises">
+                        <label onclick='$("#Q2").show()'><input type="radio" name="employed" value="1" />Yes</label>
+                        <label onclick='$("#Q2").show()'><input type="radio" name="employed" value="0" />No</label>
+                    </div>
+
+                    <div class="Next scroller">Next</div>
+
+                </div>
+
+
+                <div class="Next1 MainSettingClass">
+                    <div class="questions">
+                        Which of the following best describes the highest level of formal education that you’ve completed?
+                    </div>
+
+                    <div class="choises">
+                        <label onclick='$("#Q3").show()'><input type="radio" name="education" value=0 />I never completed any formal education, Primary/elementary school</label>
+                        <label onclick='$("#Q3").show()'><input type="radio" name="education" value=1 />Secondary school (e.g. American high school, German Realschule or Gymnasium, etc.)</label>
+                        <label onclick='$("#Q3").show()'><input type="radio" name="education" value=2 />Associate degree, Professional degree (JD, MD, etc.)</label>
+                        <label onclick='$("#Q3").show()'><input type="radio" name="education" value=3 />Some college/university study without earning a degree</label>
+                        <label onclick='$("#Q3").show()'><input type="radio" name="education" value=4 />Bachelor’s degree (BA, BS, B.Eng., etc.)</label>
+                        <label onclick='$("#Q3").show()'><input type="radio" name="education" value=5 />Master’s degree (MA, MS, M.Eng., MBA, etc.)</label>
+                        <label onclick='$("#Q3").show()'><input type="radio" name="education" value=6 />Other doctoral degree (Ph.D, Ed.D., etc.)</label>
+                    </div>
+                    <div class="Next scroller">Next</div>
+                </div>
+
+
+                <div class="Next1 MainSettingClass">
+                    <div class="questions">
+                        Approximately how many people are employed by the company or organization you work for?
+                    </div>
+
+                    <div class="choises">
+                        <label onclick='$("#Q4").show()'><input type="radio" name="company" value=0 />Just me - I am a freelancer, sole proprietor, etc., 2-9 employees, 10 to 19 employees</label>
+                        <label onclick='$("#Q4").show()'><input type="radio" name="company" value=1 />20 to 99 employees</label>
+                        <label onclick='$("#Q4").show()'><input type="radio" name="company" value=2 />100 to 499 employees</label>
+                        <label onclick='$("#Q4").show()'><input type="radio" name="company" value=3 />500 to 999 employees, 1,000 to 4,999 employees</label>
+                        <label onclick='$("#Q4").show()'><input type="radio" name="company" value=4 />5,000 to 9,999 employees, 10,000 or more employees</label>
+                    </div>
+                    <div class="Next scroller">Next</div>
+                </div>
+
+
+                <div class="Next1 MainSettingClass">
+                    <div class="questions">
+                        Including any education, how many years have you been coding? (Default value 0)
+                    </div>
+
+                    <div class="choises">
+                        <label  onclick='$("#Q5").show()'><input type="number" name="coded" min=0 max=100></label>
+                    </div>
+                    <div class="Next scroller" onclick='$("#Q5").show()'>Next</div>
+                </div>
+
+
+                <div class="Next1 MainSettingClass">
+                    <div class="questions">
+                        How many years have you coded professionally (as a part of your work)? (Default value 0)
+                    </div>
+
+                    <div class="choises">
+                        <label onclick='$("#Q6").show()'><input type="number" name="codedPro" min=0 max=100></label>
+                    </div>
+                    <div class="Next scroller" onclick='$("#Q6").show()'>Next</div>
+                </div>
+
+
+                <div class="Next1 MainSettingClass">
+                    <div class="questions">
+                        Which of the following best describes your current job­seeking status?
+                    </div>
+
+                    <div class="choises">
+                        <label onclick='$("#Q7").show()'><input type="radio" name="JobeSeeking" value=0 />I am actively looking for a job</label>
+                        <label onclick='$("#Q7").show()'><input type="radio" name="JobeSeeking" value=1 />I’m not actively looking, but I am open to new opportunities</label>
+                        <label onclick='$("#Q7").show()'><input type="radio" name="JobeSeeking" value=2 />I am not interested in new job opportunities</label>
+                    </div>
+                    <div class="Next scroller">Next</div>
+                </div>
+
+                <div class="Next1 MainSettingClass">
+                    <div class="questions">
+                        What is the operating system in which you work?
+                    </div>
+
+                    <div class="choises">
+                        <div id="choisesCheckbox" >
+                            <label><input type="checkbox" name="platform1" value=1 />Windows</label>
+                            <label><input type="checkbox" name="platform2" value=1 />MacOS</label>
+                            <label><input type="checkbox" name="platform3" value=1 />Linux-based</label>
+                            <label><input type="checkbox" name="platform4" value=1 />BSD</label>
+                        </div>
+                    </div>
+                    <div class="Next scroller">Next</div>
+                </div>
+
+
+                <div class="Next1 MainSettingClass">
+                    <div class="questions">
+                        How old are you? (Default value 0)
+                    </div>
+
+                    <div class="choises">
+                        <label onclick='$("#Q9").show()'><input type="number" name="age" min="0" max="120" ></label>
+                    </div>
+                    <div class="Next scroller" onclick='$("#Q9").show()'>Next</div>
+                </div>
+
+
+                <div class="Next1 MainSettingClass">
+                    <div class="questions">
+                        Which of the following do you currently identify as? 
+                    </div>
+
+                    <div class="choises">
+                        <label onclick='$("#Q10").show()'><input type="radio" name="gender" value=1> Man</label>
+                        <label onclick='$("#Q10").show()'><input type="radio" name="gender" value=1> Woman</label>
+                    </div>
+                    <div class="Next scroller">Next</div>
+                </div>
+
+
+                <div class="Next1 MainSettingClass">
+                    <div class="questions">
+                        Do you have any dependents (e.g., children, elders, or others) that you care for?
+                    </div>
+
+                    <div class="choises">
+                        <label onclick='$("#Q11").show()'><input type="radio" name="dependents" value=1 />Yes</label>
+                        <label onclick='$("#Q11").show()'><input type="radio" name="dependents" value=0 />No</label>
+                    </div>
+                    <div class="Next scroller">Next</div>
+                </div>
+
+
+                <div class="Next1 MainSettingClass">
+                    <div class="questions">
+                        Are you a student?
+                    </div>
+
+                    <div class="choises">
+                        <label onclick='$("#Q12").show()'><input type="radio" name="student" value=1 />Yes</label>
+                        <label onclick='$("#Q12").show()'><input type="radio" name="student" value=0 />No</label>
+                        <input type="submit" name="subm" value="Send" />
+                    </div>
+                </div>
+            </form>
         </div>
-
-        <div class="choises">
-        <label><input type="radio" name="employed" value="1" />Yes</label>
-        <label><input type="radio" name="employed" value="0" />No</label>
-        </div>
-
-        <div class="questions">
-            Which of the following best describes the highest level of formal education that you’ve completed?
-        </div>
-
-        <div class="choises">
-            <label><input type="radio" name="education" value=0 />I never completed any formal education, Primary/elementary school</label>
-            <label><input type="radio" name="education" value=1 />Secondary school (e.g. American high school, German Realschule or Gymnasium, etc.)</label>
-            <label><input type="radio" name="education" value=2 />Associate degree, Professional degree (JD, MD, etc.)</label>
-            <label><input type="radio" name="education" value=3 />Some college/university study without earning a degree</label>
-            <label><input type="radio" name="education" value=4 />Bachelor’s degree (BA, BS, B.Eng., etc.)</label>
-            <label><input type="radio" name="education" value=5 />Master’s degree (MA, MS, M.Eng., MBA, etc.)</label>
-            <label><input type="radio" name="education" value=6 />Other doctoral degree (Ph.D, Ed.D., etc.)</label>
-        </div>
-
-        <div class="questions">
-            Approximately how many people are employed by the company or organization you work for?
-        </div>
-
-        <div class="choises">
-            <label><input type="radio" name="company" value=0 />Just me - I am a freelancer, sole proprietor, etc., 2-9 employees, 10 to 19 employees</label>
-            <label><input type="radio" name="company" value=1 />20 to 99 employees</label>
-            <label><input type="radio" name="company" value=2 />100 to 499 employees</label>
-            <label><input type="radio" name="company" value=3 />500 to 999 employees, 1,000 to 4,999 employees</label>
-            <label><input type="radio" name="company" value=4 />5,000 to 9,999 employees, 10,000 or more employees</label>
-        </div>
-
-        <div class="questions">
-            Including any education, how many years have you been coding?
-        </div>
-
-        <div class="choises">
-        <label><input type="number" name="coded" min=0 max=100></label>
-        </div>
-
-        <div class="questions">
-            How many years have you coded professionally (as a part of your work)?
-        </div>
-
-        <div class="choises">
-        <label><input type="number" name="codedPro" min=0 max=100></label>
-        </div>
-
-        <div class="questions">
-            Which of the following best describes your current job­seeking status?
-        </div>
-
-        <div class="choises">
-            <label><input type="radio" name="JobeSeeking" value=0 />I am actively looking for a job</label>
-            <label><input type="radio" name="JobeSeeking" value=1 />I’m not actively looking, but I am open to new opportunities</label>
-            <label><input type="radio" name="JobeSeeking" value=2 />I am not interested in new job opportunities</label>
-        </div>
-
-        <div class="questions">
-            What is the operating system in which you work?
-        </div>
-
-        <div class="choises">
-            <label><input type="checkbox" name="platform1" value=1 />Windows</label>
-            <label><input type="checkbox" name="platform2" value=1 />MacOS</label>
-            <label><input type="checkbox" name="platform3" value=1 />Linux-based</label>
-            <label><input type="checkbox" name="platform4" value=1 />BSD</label>
-        </div>
-
-        <div class="questions">
-            How old are you?
-        </div>
-
-        <div class="choises">
-            <label><input type="number" name="age" min="0" max="120" ></label>
-        </div>
-
-        <div class="questions">
-            Which of the following do you currently identify as? 
-        </div>
-
-        <div class="choises">
-            <label><input type="radio" name="gender" value=1> Man</label>
-            <label><input type="radio" name="gender" value=1> Woman</label>
-        </div>
-
-
-        <div class="questions">
-            Do you have any dependents (e.g., children, elders, or others) that you care for?
-        </div>
-
-        <div class="choises">
-        <label><input type="radio" name="dependents" value=1 />Yes</label>
-         <label><input type="radio" name="dependents" value=0 />No</label>
-        </div>
-
-        <div class="questions">
-            Are you a student?
-        </div>
-
-        <div class="choises">
-        <label><input type="radio" name="student" value=1 />Yes</label>
-         <label><input type="radio" name="student" value=0 />No</label>
-        <input type="submit" name="subm" value="Send" />
-        </div>
-    </form>
+    </div>
 
     <hr>
     <div id="result">
-    Result: {{ vysledek }}
+        Result: {{ vysledek }}
     </div>
     <br><br>
     <div id="autors">
-         Made by: Bc. Martin Oharek, Bc. Benjamín Páterek, Bc. Mirek Kubů, Bc. Matouš Fencl, Bc. Michal Šesták under solid lead Ing. Hynek Walner
+        Made by: Bc. Martin Oharek, Bc. Benjamín Páterek, Bc. Mirek Kubů, Bc. Matouš Fencl, Bc. Michal Šesták under solid lead Ing. Hynek Walner
     </div>
+</div>
 </body>
 </html>

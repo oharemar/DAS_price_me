@@ -81,7 +81,7 @@ def PriceMe():
             y_predict = predict(result);
         print(y_predict)
 
-        return render_template("price_me.html", vysledek = y_predict[0] )#y_predict[0]) # Vrátíme naší šablonu s výsledkem
+        return render_template("result_price_me.html", vysledek = y_predict[0] )#y_predict[0]) # Vrátíme naší šablonu s výsledkem
     else:
         return render_template("price_me.html", vysledek="Fill the questioneer!")  # Vrátíme naší šablonu s výsledkem
 
