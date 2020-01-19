@@ -35,7 +35,7 @@ html {
     /*background-attachment: fixed;*/
     background-size: cover;
     height: 100vh;
-    overflow:hidden;
+    overflow-x: hidden;
     width:25%;
 }
 .column1{
@@ -97,7 +97,7 @@ html {
     cursor: pointer;
 }
 
-#prieceMe {
+#priceMe {
     width:100%;
     text-align: center;
     color:black;
@@ -126,17 +126,6 @@ html {
 .choises{
     color: black;
     margin-left:10%;
-}
-
-#result{
-    font-size:125%;
-    margin-left:1%;
-}
-
-#autors {
-    font-weight:bold;
-    font-size:125%;
-    margin-left:1%;
 }
 
 label{
@@ -214,14 +203,25 @@ li:before {
     color: black;
 }
 
+#select{
+    margin:2%;
+}
+
 #Q2{display: none;}
+#Q21{display: none;}
 #Q3{display: none;}
+#Q31{display: none;}
 #Q4{display: none;}
+#Q41{display: none;}
 #Q5{display: none;}
 #Q6{display: none;}
+#Q61{display: none;}
 #Q7{display: none;}
 #Q8{display: none;}
 #Q9{display: none;}
 #Q10{display: none;}
 #Q11{display: none;}
 #Q12{display: none;}
+#Q13{display: none;}
+#Q14{display: none;}
+#Q15{display: none;}

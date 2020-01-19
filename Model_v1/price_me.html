@@ -20,7 +20,7 @@
     $('#choisesCheckbox').click( function() {
         var boolin = false;
         for( var i = 1; i < 5; i++){
-            var namePom = "platform"+i;
+            var namePom = "OS"+i;
             var boolinPom = $('input[type=checkbox][name='+namePom+']').prop('checked');
             if( boolinPom ){
                 boolin = boolin || true;
@@ -31,13 +31,83 @@
         else
         {$("#Q8").hide();}
     });
+    $('#choisesCheckbox1').click( function() {
+        var boolin = false;
+        for( var i = 1; i < 18; i++){
+            var namePom = "DevType"+i;
+            var boolinPom = $('input[type=checkbox][name='+namePom+']').prop('checked');
+            if( boolinPom ){
+                boolin = boolin || true;
+            }
+        }
+        if( boolin )
+        { $("#Q41").show();}
+        else
+        {$("#Q41").hide();}
+    });
+    $('#choisesCheckbox2').click( function() {
+        var boolin = false;
+        for( var i = 1; i < 12; i++){
+            var namePom = "laguages"+i;
+            var boolinPom = $('input[type=checkbox][name='+namePom+']').prop('checked');
+            if( boolinPom ){
+                boolin = boolin || true;
+            }
+        }
+        if( boolin )
+        { $("#Q12").show();}
+        else
+        {$("#Q12").hide();}
+    });
+    $('#choisesCheckbox3').click( function() {
+        var boolin = false;
+        for( var i = 1; i < 4; i++){
+            var namePom = "database"+i;
+            var boolinPom = $('input[type=checkbox][name='+namePom+']').prop('checked');
+            if( boolinPom ){
+                boolin = boolin || true;
+            }
+        }
+        if( boolin )
+        { $("#Q13").show();}
+        else
+        {$("#Q13").hide();}
+    });
+    $('#choisesCheckbox4').click( function() {
+        var boolin = false;
+        for( var i = 1; i < 9; i++){
+            var namePom = "platforms"+i;
+            var boolinPom = $('input[type=checkbox][name='+namePom+']').prop('checked');
+            if( boolinPom ){
+                boolin = boolin || true;
+            }
+        }
+        if( boolin )
+        { $("#Q14").show();}
+        else
+        {$("#Q14").hide();}
+    });
+    $('#choisesCheckbox5').click( function() {
+        var boolin = false;
+        for( var i = 1; i < 5; i++){
+            var namePom = "frameworks"+i;
+            var boolinPom = $('input[type=checkbox][name='+namePom+']').prop('checked');
+            if( boolinPom ){
+                boolin = boolin || true;
+            }
+        }
+        if( boolin )
+        { $("#Q15").show();}
+        else
+        {$("#Q15").hide();}
+    });
     });
     </script>
 </head>
 <body>
 <div class="BODY right">
     <div id="Head" class="Next1">
-        <div id="prieceMe">
+        <div id="priceMe">
             Price me!
         </div>
         <div class="baseMargin subtitle">
@@ -66,6 +136,14 @@
             </div>
             <div class="Answers">
                 <div class="column1 left1">
+                    <div class="AnsweredQ">Student</div>
+                </div>
+                <div class="column1 right1">
+                    <div id="Q21"><li /></div>
+                </div>
+            </div>
+            <div class="Answers">
+                <div class="column1 left1">
                     <div class="AnsweredQ">Education</div>
                 </div>
                 <div class="column1 right1">
@@ -74,10 +152,26 @@
             </div>
             <div class="Answers">
                 <div class="column1 left1">
+                    <div class="AnsweredQ">Major Educ.</div>
+                </div>
+                <div class="column1 right1">
+                    <div id="Q31"><li /></div>
+                </div>
+            </div>
+            <div class="Answers">
+                <div class="column1 left1">
                     <div class="AnsweredQ">co-workers</div>
                 </div>
                 <div class="column1 right1">
                     <div id="Q4"><li /></div>
+                </div>
+            </div>
+            <div class="Answers">
+                <div class="column1 left1">
+                    <div class="AnsweredQ">DevType</div>
+                </div>
+                <div class="column1 right1">
+                    <div id="Q41"><li /></div>
                 </div>
             </div>
             <div class="Answers">
@@ -94,6 +188,15 @@
                 </div>
                 <div class="column1 right1">
                     <div id="Q6"><li /></div>
+                </div>
+            </div>
+
+            <div class="Answers">
+                <div class="column1 left1">
+                    <div class="AnsweredQ">Car. Satis.</div>
+                </div>
+                <div class="column1 right1">
+                    <div id="Q61"><li /></div>
                 </div>
             </div>
             <div class="Answers">
@@ -138,10 +241,34 @@
             </div>
             <div class="Answers">
                 <div class="column1 left1">
-                    <div class="AnsweredQ">Student</div>
+                    <div class="AnsweredQ">Prog. Lang.</div>
                 </div>
                 <div class="column1 right1">
                     <div id="Q12"><li /></div>
+                </div>
+            </div>
+            <div class="Answers">
+                <div class="column1 left1">
+                    <div class="AnsweredQ">Database</div>
+                </div>
+                <div class="column1 right1">
+                    <div id="Q13"><li /></div>
+                </div>
+            </div>
+            <div class="Answers">
+                <div class="column1 left1">
+                    <div class="AnsweredQ">Platforms</div>
+                </div>
+                <div class="column1 right1">
+                    <div id="Q14"><li /></div>
+                </div>
+            </div>
+            <div class="Answers">
+                <div class="column1 left1">
+                    <div class="AnsweredQ">Frameworks</div>
+                </div>
+                <div class="column1 right1">
+                    <div id="Q15"><li /></div>
                 </div>
             </div>
         </div>
@@ -151,8 +278,8 @@
                     <div class="questions">Do you code as a hobby?</div>
 
                     <div class="choises">
-                        <label onclick='$("#Q1").show()'><input type="radio" name="hobby" value="1" />Yes</label>
-                        <label onclick='$("#Q1").show()'><input type="radio" name="hobby" value="0" />No</label>
+                        <label onclick='$("#Q1").show()'><input type="radio" name="hobby" value="Yes" />Yes</label>
+                        <label onclick='$("#Q1").show()'><input type="radio" name="hobby" value="No" />No</label>
                     </div>
                     <div class="Next scroller">Next</div>
                 </div>
@@ -160,18 +287,29 @@
 
                 <div class="Next1 MainSettingClass">
                     <div class="questions">
-                        Are you employed as full-time worker?
+                        What's your current employment status?
                     </div>
 
                     <div class="choises">
-                        <label onclick='$("#Q2").show()'><input type="radio" name="employed" value="1" />Yes</label>
-                        <label onclick='$("#Q2").show()'><input type="radio" name="employed" value="0" />No</label>
+                        <label onclick='$("#Q2").show()'><input type="radio" name="employed" value="Employed full-time" />Employed full-time</label>
+                        <label onclick='$("#Q2").show()'><input type="radio" name="employed" value="Independent" />Independent contractor, freelancer, or self-employed</label>
                     </div>
 
                     <div class="Next scroller">Next</div>
 
                 </div>
 
+                <div class="Next1 MainSettingClass">
+                    <div class="questions">
+                        Are you student?
+                    </div>
+
+                    <div class="choises">
+                        <label onclick='$("#Q21").show()'><input type="radio" name="student" value="No" />No</label>
+                        <label onclick='$("#Q21").show()'><input type="radio" name="student" value="Yes" />Full-time or part-time</label>
+                    </div>
+                    <div class="Next scroller">Next</div>
+                </div>
 
                 <div class="Next1 MainSettingClass">
                     <div class="questions">
@@ -179,17 +317,31 @@
                     </div>
 
                     <div class="choises">
-                        <label onclick='$("#Q3").show()'><input type="radio" name="education" value=0 />I never completed any formal education, Primary/elementary school</label>
-                        <label onclick='$("#Q3").show()'><input type="radio" name="education" value=1 />Secondary school (e.g. American high school, German Realschule or Gymnasium, etc.)</label>
-                        <label onclick='$("#Q3").show()'><input type="radio" name="education" value=2 />Associate degree, Professional degree (JD, MD, etc.)</label>
-                        <label onclick='$("#Q3").show()'><input type="radio" name="education" value=3 />Some college/university study without earning a degree</label>
-                        <label onclick='$("#Q3").show()'><input type="radio" name="education" value=4 />Bachelor’s degree (BA, BS, B.Eng., etc.)</label>
-                        <label onclick='$("#Q3").show()'><input type="radio" name="education" value=5 />Master’s degree (MA, MS, M.Eng., MBA, etc.)</label>
-                        <label onclick='$("#Q3").show()'><input type="radio" name="education" value=6 />Other doctoral degree (Ph.D, Ed.D., etc.)</label>
+                        <label onclick='$("#Q3").show()'><input type="radio" name="education" value="basic" />I never completed any formal education, Primary/elementary school</label>
+                        <label onclick='$("#Q3").show()'><input type="radio" name="education" value="secondary" />Secondary school (e.g. American high school, German Realschule or Gymnasium, etc.)</label>
+                        <label onclick='$("#Q3").show()'><input type="radio" name="education" value="assoc_prof" />Associate degree, Professional degree (JD, MD, etc.)</label>
+                        <label onclick='$("#Q3").show()'><input type="radio" name="education" value="collage" />Some college/university study without earning a degree</label>
+                        <label onclick='$("#Q3").show()'><input type="radio" name="education" value="bachelor" />Bachelor’s degree (BA, BS, B.Eng., etc.)</label>
+                        <label onclick='$("#Q3").show()'><input type="radio" name="education" value="master" />Master’s degree (MA, MS, M.Eng., MBA, etc.)</label>
+                        <label onclick='$("#Q3").show()'><input type="radio" name="education" value="doctor"/>Other doctoral degree (Ph.D, Ed.D., etc.)</label>
                     </div>
                     <div class="Next scroller">Next</div>
                 </div>
 
+                <div class="Next1 MainSettingClass">
+                    <div class="questions">
+                       What was your main or most important field of study?
+                    </div>
+
+                    <div class="choises">
+                        <label onclick='$("#Q31").show()'><input type="radio" name="majorStud" value="IT" />Computer science, computer engineering, or software engineering, web development or web design, information systems, information technology, or system administration</label>
+                        <label onclick='$("#Q31").show()'><input type="radio" name="majorStud" value="math" />Mathematics or statistics</label>
+                        <label onclick='$("#Q31").show()'><input type="radio" name="majorStud" value="ing" />Another engineering discipline (ex. civil, electrical, mechanical), a natural science (ex. biology, chemistry, physics) or A business discipline (ex. accounting, finance, marketing)</label>
+                        <label onclick='$("#Q31").show()'><input type="radio" name="majorStud" value="other" />A humanities discipline (ex. literature, history, philosophy), fine arts or performing arts (ex. graphic design, music, studio art), a social science (ex. anthropology, psychology, political science), a health science (ex. nursing, pharmacy, radiology)</label>
+                        <label onclick='$("#Q31").show()'><input type="radio" name="majorStud" value="no_major" />I never declared a major</label>
+                    </div>
+                    <div class="Next scroller">Next</div>
+                </div>
 
                 <div class="Next1 MainSettingClass">
                     <div class="questions">
@@ -197,15 +349,42 @@
                     </div>
 
                     <div class="choises">
-                        <label onclick='$("#Q4").show()'><input type="radio" name="company" value=0 />Just me - I am a freelancer, sole proprietor, etc., 2-9 employees, 10 to 19 employees</label>
-                        <label onclick='$("#Q4").show()'><input type="radio" name="company" value=1 />20 to 99 employees</label>
-                        <label onclick='$("#Q4").show()'><input type="radio" name="company" value=2 />100 to 499 employees</label>
-                        <label onclick='$("#Q4").show()'><input type="radio" name="company" value=3 />500 to 999 employees, 1,000 to 4,999 employees</label>
-                        <label onclick='$("#Q4").show()'><input type="radio" name="company" value=4 />5,000 to 9,999 employees, 10,000 or more employees</label>
+                        <label onclick='$("#Q4").show()'><input type="radio" name="company" value="1_19" />Just me - I am a freelancer, sole proprietor, etc., 2-9 employees, 10 to 19 employees</label>
+                        <label onclick='$("#Q4").show()'><input type="radio" name="company" value="20_99" />20 to 99 employees</label>
+                        <label onclick='$("#Q4").show()'><input type="radio" name="company" value="100-499" />100 to 499 employees</label>
+                        <label onclick='$("#Q4").show()'><input type="radio" name="company" value="500-4999" />500 to 999 employees, 1,000 to 4,999 employees</label>
+                        <label onclick='$("#Q4").show()'><input type="radio" name="company" value="5000_" />5,000 to 9,999 employees, 10,000 or more employees</label>
                     </div>
                     <div class="Next scroller">Next</div>
                 </div>
 
+                <div class="Next1 MainSettingClass">
+                    <div class="questions">
+                        What is the operating system in which you work?
+                    </div>
+                    <div class="choises">
+                        <div id="choisesCheckbox1" >
+                            <label><input type="checkbox" name="DevType1" value=1 />Back-end developer</label>
+                            <label><input type="checkbox" name="DevType2" value=1 />Front-end developer</label>
+                            <label><input type="checkbox" name="DevType3" value=1 />Full-stack developer</label>
+                            <label><input type="checkbox" name="DevType4" value=1 />Desktop or enterprise applications developer</label>
+                            <label><input type="checkbox" name="DevType5" value=1 />Mobile developer</label>
+                            <label><input type="checkbox" name="DevType6" value=1 />Embedded applications or devices developer</label>
+                            <label><input type="checkbox" name="DevType7" value=1 />Scientist or educator or academic researcher</label>
+                            <label><input type="checkbox" name="DevType8" value=1 />Database administrator</label>
+                            <label><input type="checkbox" name="DevType9" value=1 />DevOps specialist</label>
+                            <label><input type="checkbox" name="DevType10" value=1 />System administrator</label>
+                            <label><input type="checkbox" name="DevType11" value=1 />Game or graphics developer</label>
+                            <label><input type="checkbox" name="DevType12" value=1 />Developer, QA or test</label>
+                            <label><input type="checkbox" name="DevType13" value=1 />Designer</label>
+                            <label><input type="checkbox" name="DevType14" value=1 />Engineering manager</label>
+                            <label><input type="checkbox" name="DevType15" value=1 />Data or business analyst</label>
+                            <label><input type="checkbox" name="DevType16" value=1 />Data scientist or machine learning specialist</label>
+                            <label><input type="checkbox" name="DevType17" value=1 />Product manager</label>
+                        </div>
+                    </div>
+                    <div class="Next scroller">Next</div>
+                </div>
 
                 <div class="Next1 MainSettingClass">
                     <div class="questions">
@@ -230,6 +409,22 @@
                     <div class="Next scroller" onclick='$("#Q6").show()'>Next</div>
                 </div>
 
+                <div class="Next1 MainSettingClass">
+                    <div class="questions">
+                        Which of the following best describes your current career satisfaction?
+                    </div>
+
+                    <div class="choises">
+                        <label onclick='$("#Q61").show()'><input type="radio" name="CarSatis" value=0 />Extremely dissatisfied</label>
+                        <label onclick='$("#Q61").show()'><input type="radio" name="CarSatis" value=0.2 />Moderately dissatisfied</label>
+                        <label onclick='$("#Q61").show()'><input type="radio" name="CarSatis" value=0.4 />Slightly dissatisfied</label>
+                        <label onclick='$("#Q61").show()'><input type="radio" name="CarSatis" value=0.5 />Neither satisfied nor dissatisfied</label>
+                        <label onclick='$("#Q61").show()'><input type="radio" name="CarSatis" value=0.6 />Slightly satisfied</label>
+                        <label onclick='$("#Q61").show()'><input type="radio" name="CarSatis" value=0.8 />Moderately satisfied</label>
+                        <label onclick='$("#Q61").show()'><input type="radio" name="CarSatis" value=1 />Extremely satisfied</label>
+                    </div>
+                    <div class="Next scroller">Next</div>
+                </div>
 
                 <div class="Next1 MainSettingClass">
                     <div class="questions">
@@ -237,9 +432,9 @@
                     </div>
 
                     <div class="choises">
-                        <label onclick='$("#Q7").show()'><input type="radio" name="JobeSeeking" value=0 />I am actively looking for a job</label>
-                        <label onclick='$("#Q7").show()'><input type="radio" name="JobeSeeking" value=1 />I’m not actively looking, but I am open to new opportunities</label>
-                        <label onclick='$("#Q7").show()'><input type="radio" name="JobeSeeking" value=2 />I am not interested in new job opportunities</label>
+                        <label onclick='$("#Q7").show()'><input type="radio" name="JobeSeeking" value="active" />I am actively looking for a job</label>
+                        <label onclick='$("#Q7").show()'><input type="radio" name="JobeSeeking" value="open" />I’m not actively looking, but I am open to new opportunities</label>
+                        <label onclick='$("#Q7").show()'><input type="radio" name="JobeSeeking" value="nointerest" />I am not interested in new job opportunities</label>
                     </div>
                     <div class="Next scroller">Next</div>
                 </div>
@@ -251,10 +446,10 @@
 
                     <div class="choises">
                         <div id="choisesCheckbox" >
-                            <label><input type="checkbox" name="platform1" value=1 />Windows</label>
-                            <label><input type="checkbox" name="platform2" value=1 />MacOS</label>
-                            <label><input type="checkbox" name="platform3" value=1 />Linux-based</label>
-                            <label><input type="checkbox" name="platform4" value=1 />BSD</label>
+                            <label><input type="checkbox" name="OS1" value=1 />Windows</label>
+                            <label><input type="checkbox" name="OS2" value=1 />MacOS</label>
+                            <label><input type="checkbox" name="OS3" value=1 />Linux-based</label>
+                            <label><input type="checkbox" name="OS4" value=1 />BSD</label>
                         </div>
                     </div>
                     <div class="Next scroller">Next</div>
@@ -279,8 +474,8 @@
                     </div>
 
                     <div class="choises">
-                        <label onclick='$("#Q10").show()'><input type="radio" name="gender" value=1> Man</label>
-                        <label onclick='$("#Q10").show()'><input type="radio" name="gender" value=1> Woman</label>
+                        <label onclick='$("#Q10").show()'><input type="radio" name="gender" value="Man"> Man</label>
+                        <label onclick='$("#Q10").show()'><input type="radio" name="gender" value="Woman"> Woman</label>
                     </div>
                     <div class="Next scroller">Next</div>
                 </div>
@@ -292,36 +487,263 @@
                     </div>
 
                     <div class="choises">
-                        <label onclick='$("#Q11").show()'><input type="radio" name="dependents" value=1 />Yes</label>
-                        <label onclick='$("#Q11").show()'><input type="radio" name="dependents" value=0 />No</label>
+                        <label onclick='$("#Q11").show()'><input type="radio" name="dependents" value="Yes" />Yes</label>
+                        <label onclick='$("#Q11").show()'><input type="radio" name="dependents" value="No" />No</label>
                     </div>
                     <div class="Next scroller">Next</div>
                 </div>
 
-
                 <div class="Next1 MainSettingClass">
                     <div class="questions">
-                        Are you a student?
+                        What programming languages do you know?
                     </div>
 
                     <div class="choises">
-                        <label onclick='$("#Q12").show()'><input type="radio" name="student" value=1 />Yes</label>
-                        <label onclick='$("#Q12").show()'><input type="radio" name="student" value=0 />No</label>
-                        <input type="submit" name="subm" value="Send" />
+                        <div id="choisesCheckbox2" >
+                            <label><input type="checkbox" name="laguages1" value=1 />Java or JavaScript</label>
+                            <label><input type="checkbox" name="laguages2" value=1 />Python</label>
+                            <label><input type="checkbox" name="laguages3" value=1 />HTML and CSS</label>
+                            <label><input type="checkbox" name="laguages4" value=1 />C, C++, C# and/or Objective-C</label>
+                            <label><input type="checkbox" name="laguages5" value=1 />R</label>
+                            <label><input type="checkbox" name="laguages6" value=1 />SQL</label>
+                            <label><input type="checkbox" name="laguages7" value=1 />PHP</label>
+                            <label><input type="checkbox" name="laguages8" value=1 />TypeScript</label>
+                            <label><input type="checkbox" name="laguages9" value=1 />Swift</label>
+                            <label><input type="checkbox" name="laguages10" value=1 />Bash, Shell and/or PowerShell</label>
+                            <label><input type="checkbox" name="laguages11" value=1 />Other</label>
+                        </div>
+                    </div>
+                    <div class="Next scroller">Next</div>
+                </div>
+
+                <div class="Next1 MainSettingClass">
+                    <div class="questions">
+                        What database enviroments do you know?
+                    </div>
+
+                    <div class="choises">
+                        <div id="choisesCheckbox3" >
+                            <label><input type="checkbox" name="database1" value=1 />PostgreSQL, SQLite, MySQL and/or MariaDB</label>
+                            <label><input type="checkbox" name="database2" value=1 />Redis, MongoDB, Elasticsearch and/or Cassandra</label>
+                            <label><input type="checkbox" name="database3" value=1 />Oracle</label>
+                        </div>
+                    </div>
+                    <div class="Next scroller">Next</div>
+                </div>
+                <div class="Next1 MainSettingClass">
+                    <div class="questions">
+                        What database enviroments do you know?
+                    </div>
+
+                    <div class="choises">
+                        <div id="choisesCheckbox4" >
+                            <label><input type="checkbox" name="platforms1" value=1 />Linux</label>
+                            <label><input type="checkbox" name="platforms2" value=1 />Arduino, Raspberry Pi</label>
+                            <label><input type="checkbox" name="platforms3" value=1 />AWS, IBM Cloud or Watson, Heroku, Microsoft Azure, Azure, Google Cloud Platform/App Engine, Google Cloud Platform</label>
+                            <label><input type="checkbox" name="platforms4" value=1 />Mac OS</label>
+                            <label><input type="checkbox" name="platforms5" value=1 />iOS</label>
+                            <label><input type="checkbox" name="platforms6" value=1 />Android</label>
+                            <label><input type="checkbox" name="platforms7" value=1 />WordPress</label>
+                            <label><input type="checkbox" name="platforms8" value=1 />Windows Desktop or Server</label>
+                        </div>
+                    </div>
+                    <div class="Next scroller">Next</div>
+                </div>
+
+                <div class="Next1 MainSettingClass">
+                    <div class="questions">
+                        What framworks do you know?
+                    </div>
+
+                    <div class="choises">
+                        <div id="choisesCheckbox5" >
+                            <label><input type="checkbox" name="frameworks1" value=1 />Django, Node.js, Angular/Angular.js, Angular, React.js and/or React</label>
+                            <label><input type="checkbox" name="frameworks2" value=1 />Hadoop, Apache Spark and/or Spark</label>
+                            <label><input type="checkbox" name="frameworks3" value=1 />.NET Core; Cordova, spring and/or Xamarin</label>
+                            <label><input type="checkbox" name="frameworks4" value=1 />TensorFlow and/or Torch/PyTorch</label>
+                        </div>
                     </div>
                 </div>
+
+                <div class="Next1 MainSettingClass">
+                    <div class="questions">
+                        Pick your country from which you want to get result.
+                    </div>
+                    <select id="select" name="country">
+                        <option value="Afghanistan">Afghanistan</option>
+                        <option value="Albania">Albania</option>
+                        <option value="Algeria">Algeria</option>
+                        <option value="Andorra">Andorra</option>
+                        <option value="Argentina">Argentina</option>
+                        <option value="Armenia">Armenia</option>
+                        <option value="Australia">Australia</option>
+                        <option value="Austria">Austria</option>
+                        <option value="Azerbaijan">Azerbaijan</option>
+                        <option value="Bahamas">Bahamas</option>
+                        <option value="Bahrain">Bahrain</option>
+                        <option value="Bangladesh">Bangladesh</option>
+                        <option value="Barbados">Barbados</option>
+                        <option value="Belarus">Belarus</option>
+                        <option value="Belgium">Belgium</option>
+                        <option value="Benin">Benin</option>
+                        <option value="Bhutan">Bhutan</option>
+                        <option value="Bolivia">Bolivia</option>
+                        <option value="Bosnia and Herzegovina">Bosnia and Herzegovina</option>
+                        <option value="Botswana">Botswana</option>
+                        <option value="Brazil">Brazil</option>
+                        <option value="Brunei Darussalam">Brunei Darussalam</option>
+                        <option value="Bulgaria">Bulgaria</option>
+                        <option value="Burkina Faso">Burkina Faso</option>
+                        <option value="Burundi">Burundi</option>
+                        <option value="Cambodia">Cambodia</option>
+                        <option value="Cameroon">Cameroon</option>
+                        <option value="Canada">Canada</option>
+                        <option value="Chad">Chad</option>
+                        <option value="Chile">Chile</option>
+                        <option value="China">China</option>
+                        <option value="Colombia">Colombia</option>
+                        <option value="Congo, Republic of the...">Congo, Republic of the...</option>
+                        <option value="Costa Rica">Costa Rica</option>
+                        <option value="Croatia">Croatia</option>
+                        <option value="Cuba">Cuba</option>
+                        <option value="Cyprus">Cyprus</option>
+                        <option value="Czech Republic">Czech Republic</option>
+                        <option value="Democratic Republic of the Congo">Democratic Republic of the Congo</option>
+                        <option value="Denmark">Denmark</option>
+                        <option value="Djibouti">Djibouti</option>
+                        <option value="Dominican Republic">Dominican Republic</option>
+                        <option value="Ecuador">Ecuador</option>
+                        <option value="Egypt">Egypt</option>
+                        <option value="El Salvador">El Salvador</option>
+                        <option value="Estonia">Estonia</option>
+                        <option value="Ethiopia">Ethiopia</option>
+                        <option value="Fiji">Fiji</option>
+                        <option value="Finland">Finland</option>
+                        <option value="France">France</option>
+                        <option value="Gambia">Gambia</option>
+                        <option value="Georgia">Georgia</option>
+                        <option value="Germany">Germany</option>
+                        <option value="Ghana">Ghana</option>
+                        <option value="Greece">Greece</option>
+                        <option value="Guatemala">Guatemala</option>
+                        <option value="Guinea">Guinea</option>
+                        <option value="Haiti">Haiti</option>
+                        <option value="Honduras">Honduras</option>
+                        <option value="Hong Kong (S.A.R.)">Hong Kong (S.A.R.)</option>
+                        <option value="Hungary">Hungary</option>
+                        <option value="Iceland">Iceland</option>
+                        <option value="India">India</option>
+                        <option value="Indonesia">Indonesia</option>
+                        <option value="Iran">Iran</option>
+                        <option value="Iraq">Iraq</option>
+                        <option value="Ireland">Ireland</option>
+                        <option value="Israel">Israel</option>
+                        <option value="Italy">Italy</option>
+                        <option value="Ivory Coast">Ivory Coast</option>
+                        <option value="Jamaica">Jamaica</option>
+                        <option value="Japan">Japan</option>
+                        <option value="Jordan">Jordan</option>
+                        <option value="Kazakhstan">Kazakhstan</option>
+                        <option value="Kenya">Kenya</option>
+                        <option value="Kuwait">Kuwait</option>
+                        <option value="Kyrgyzstan">Kyrgyzstan</option>
+                        <option value="Lao People's Democratic Republic">Lao People's Democratic Republic</option>
+                        <option value="Latvia">Latvia</option>
+                        <option value="Lebanon">Lebanon</option>
+                        <option value="Lesotho">Lesotho</option>
+                        <option value="Libyan Arab Jamahiriya">Libyan Arab Jamahiriya</option>
+                        <option value="Liechtenstein">Liechtenstein</option>
+                        <option value="Lithuania">Lithuania</option>
+                        <option value="Luxembourg">Luxembourg</option>
+                        <option value="Madagascar">Madagascar</option>
+                        <option value="Malawi">Malawi</option>
+                        <option value="Malaysia">Malaysia</option>
+                        <option value="Maldives">Maldives</option>
+                        <option value="Mali">Mali</option>
+                        <option value="Malta">Malta</option>
+                        <option value="Mauritius">Mauritius</option>
+                        <option value="Mexico">Mexico</option>
+                        <option value="Monaco">Monaco</option>
+                        <option value="Mongolia">Mongolia</option>
+                        <option value="Montenegro">Montenegro</option>
+                        <option value="Morocco">Morocco</option>
+                        <option value="Mozambique">Mozambique</option>
+                        <option value="Myanmar">Myanmar</option>
+                        <option value="Namibia">Namibia</option>
+                        <option value="Nepal">Nepal</option>
+                        <option value="Netherlands">Netherlands</option>
+                        <option value="New Zealand">New Zealand</option>
+                        <option value="Nicaragua">Nicaragua</option>
+                        <option value="Nigeria">Nigeria</option>
+                        <option value="Norway">Norway</option>
+                        <option value="Oman">Oman</option>
+                        <option value="Pakistan">Pakistan</option>
+                        <option value="Panama">Panama</option>
+                        <option value="Paraguay">Paraguay</option>
+                        <option value="Peru">Peru</option>
+                        <option value="Philippines">Philippines</option>
+                        <option value="Poland">Poland</option>
+                        <option value="Portugal">Portugal</option>
+                        <option value="Qatar">Qatar</option>
+                        <option value="Republic of Korea">Republic of Korea</option>
+                        <option value="Republic of Moldova">Republic of Moldova</option>
+                        <option value="Romania">Romania</option>
+                        <option value="Russian Federation">Russian Federation</option>
+                        <option value="Rwanda">Rwanda</option>
+                        <option value="Saint Vincent and the Grenadines">Saint Vincent and the Grenadines</option>
+                        <option value="San Marino">San Marino</option>
+                        <option value="Saudi Arabia">Saudi Arabia</option>
+                        <option value="Senegal">Senegal</option>
+                        <option value="Serbia">Serbia</option>
+                        <option value="Seychelles">Seychelles</option>
+                        <option value="Sierra Leone">Sierra Leone</option>
+                        <option value="Singapore">Singapore</option>
+                        <option value="Slovakia">Slovakia</option>
+                        <option value="Slovenia">Slovenia</option>
+                        <option value="Somalia">Somalia</option>
+                        <option value="South Africa">South Africa</option>
+                        <option value="South Korea">South Korea</option>
+                        <option value="Spain">Spain</option>
+                        <option value="Sri Lanka">Sri Lanka</option>
+                        <option value="Sudan">Sudan</option>
+                        <option value="Suriname">Suriname</option>
+                        <option value="Swaziland">Swaziland</option>
+                        <option value="Sweden">Sweden</option>
+                        <option value="Switzerland">Switzerland</option>
+                        <option value="Syrian Arab Republic">Syrian Arab Republic</option>
+                        <option value="Taiwan">Taiwan</option>
+                        <option value="Tajikistan">Tajikistan</option>
+                        <option value="Thailand">Thailand</option>
+                        <option value="Timor-Leste">Timor-Leste</option>
+                        <option value="Togo">Togo</option>
+                        <option value="Trinidad and Tobago">Trinidad and Tobago</option>
+                        <option value="Tunisia">Tunisia</option>
+                        <option value="Turkey">Turkey</option>
+                        <option value="Turkmenistan">Turkmenistan</option>
+                        <option value="Uganda">Uganda</option>
+                        <option value="Ukraine">Ukraine</option>
+                        <option value="United Arab Emirates">United Arab Emirates</option>
+                        <option value="United Kingdom">United Kingdom</option>
+                        <option value="United Republic of Tanzania">United Republic of Tanzania</option>
+                        <option value="United States">United States</option>
+                        <option value="Uruguay">Uruguay</option>
+                        <option value="Uzbekistan">Uzbekistan</option>
+                        <option value="Venezuela, Bolivarian Republic of...">Venezuela, Bolivarian Republic of...</option>
+                        <option value="Viet Nam">Viet Nam</option>
+                        <option value="Yemen">Yemen</option>
+                        <option value="Zambia">Zambia</option>
+                        <option value="Zimbabwe">Zimbabwe</option>
+
+                    </select>
+                    <input type="submit" name="subm" value="Send" />
+                </div>
+
+
             </form>
         </div>
     </div>
 
     <hr>
-    <div id="result">
-        Result: {{ vysledek }}
-    </div>
-    <br><br>
-    <div id="autors">
-        Made by: Bc. Martin Oharek, Bc. Benjamín Páterek, Bc. Mirek Kubů, Bc. Matouš Fencl, Bc. Michal Šesták under solid lead Ing. Hynek Walner
-    </div>
 </div>
 </body>
 </html>

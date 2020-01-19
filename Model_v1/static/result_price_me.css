@@ -1,0 +1,79 @@
+body{
+    background-image: url("./HynekPriceMe.jpg");
+    background-repeat:no-repeat;
+    background-position: center;
+    background-attachment: fixed;
+    background-size: cover;
+    height: 100vh;
+    overflow: hidden;
+    margin: 0 0 0 0;
+}
+#Head{
+    color:DarkRed;
+    margin:2.5%;
+    background: rgba(150,150,150,0.5);
+    height: 65vh;
+    width:95%;
+}
+
+#Bottom{
+    color:DarkRed;
+    margin: 2.5% 2.5% 1.5% 2.5%;
+    background: rgba(150,150,150,0.5);
+    height: 18vh;
+    bottom: 0;
+    width: 95%;
+    position: fixed;
+}
+
+.subtitle{
+    font-weight: bold;
+    font-size: 150%;
+}
+
+.baseMargin{
+    margin: 0 0 0 8%;
+}
+
+#priceMe {
+    width:100%;
+    text-align: center;
+    color:black;
+    font-size:400%;
+    margin: 10px 0 40px 0;
+ }
+
+ input[type=submit]{
+    cursor: pointer;
+    margin: 0 0 0 75%;
+    background-color: #4CAF50;
+    border: 2px solid black;
+    color: black;
+    padding: 8px 16px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    cursor: pointer;
+    bottom: 10%;
+    position: fixed;
+}
+
+#result{
+    font-size:125%;
+    margin:2.5%;
+}
+
+#autors {
+    font-weight:bold;
+    font-size:125%;
+    margin-left:1%;
+    bottom: 3%;
+    position: fixed;
+}
+
+#bargraph{
+    width: 80%;
+    height: 50%;
+    margin: 0 0 0 5%;
+}

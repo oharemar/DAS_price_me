@@ -13,6 +13,7 @@ def predict(input_array, country):
     y_pred = y_pred_norm*country_coef
     return y_pred
 
+'''
 df = pd.DataFrame({'Code as a hobby': 'No',
  'Employment': ['Employed full-time'],
  'Student': 'No',
@@ -84,3 +85,4 @@ country = 'Iceland'
 
 
 print(predict(df, country))
+'''
